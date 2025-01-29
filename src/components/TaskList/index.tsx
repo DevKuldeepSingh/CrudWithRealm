@@ -39,11 +39,15 @@ const TaskList = ({tasks, onEdit}) => {
             <Text>{`Description: ${item.description}`}</Text>
           )}
           <View style={styles.actions}>
-            <TouchableOpacity style={styles.button}>
-              <Text onPress={() => onEdit(item)}>Edit</Text>
+            <TouchableOpacity
+              onPress={() => onEdit(item)}
+              style={styles.button}>
+              <Text>Edit</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-              <Text onPress={() => handleDelete(item.id)}>Delete</Text>
+            <TouchableOpacity
+              onPress={() => handleDelete(item.id)}
+              style={styles.button}>
+              <Text>Delete</Text>
             </TouchableOpacity>
           </View>
         </View>
